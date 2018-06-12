@@ -1,4 +1,4 @@
-# eztimer
+# EzTimer
 
 ## synchronisable JavaScript count down timer
 
