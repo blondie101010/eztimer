@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EzTimer test</title>
+<link rel="stylesheet" type="text/css" href="eztimer.css"/>
+<script type="text/javascript" src="eztimer.js">
+</script>
+<script type="text/javascript">
+var myEzTimer;
+
+var startTimer = function() {
+    myEzTimer = new EzTimer("myTimer", 15, 5);  // 15 second timer with warning at 5 seconds
+
+    myEzTimer.call = function() {
+        alert("expired");
+    }
+};
+</script>
+<style>
+body {
+  margin: 10% 50% 10% 50%;
+}
+</style>
+</head>
+<body onload="javascript:startTimer()">
+<div id="myTimer"</div>
+</body>
+</html>
