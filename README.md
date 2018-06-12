@@ -2,7 +2,7 @@
 
 ## synchronisable JavaScript count down timer
 
-This package is a simple JavaScript count-down timer that can receive updates.
+This package is a simple JavaScript count-down timer that can receive updates and can make a predefined call when the time runs out (see [Call](#call)).
 
 ## usage
 
@@ -15,3 +15,7 @@ The class is simply instanciated as: `var myEzTimer = new EzTimer("myTimer", 15,
 This module allows synchronization with a remote system by doing HTTP(S) requests to it and calling `$myEzTimer.update(seconds)` with the relevant `seconds` parameter.
 
 This enables you to ensure that the time flow is really controlled in the back-end, typically kept in a database table or session information.
+
+## call
+
+You can define a function or method to call once the time runs out such as what is shown in the example to produce an `alert()`.  This is done by defining the object / class `call` method or function.
