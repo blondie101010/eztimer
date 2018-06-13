@@ -18,4 +18,4 @@ This enables you to ensure that the time flow is really controlled in the back-e
 
 ## call
 
-You can define a function or method to call once the time runs out such as what is shown in the example to produce an `alert()`.  This is done by defining the object / class `call` method or function.
+You can define a function or method to call once the time runs out such as what is shown in the example to produce an `alert()`.  This is done by defining the EzTimer's `call` method.
