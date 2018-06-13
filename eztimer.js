@@ -1,20 +1,24 @@
+'use strict';
+
 class EzTimer {
-    constructor(div, seconds, warn) {
-        if (typeof div == 'undefined') {
+    /**
+     * 
+     * @param {(string|HTMLElement)} selector target HTML element
+     * @param {number} seconds 
+     * @param {number} warn 
+     */
+    constructor(selector, seconds = 0, warn  = 0){
+        if (typeof selector === 'undefined') {
             throw "The `div` parameter is required in EzTimer.";
         }
-        
-        this.element = document.getElementById(div);
-        this.element.className += " ezTimer";
-        
-        if (typeof seconds == 'undefined') {
-            seconds = 0;
+
+        if (selector instanceof HTMLElement){
+            this.element = selector;
+        }else{
+            this.element = document.querySelector(selector);
         }
-        
-        if (typeof warn == 'undefined') {
-            warn = 0;
-        }
-        
+        this.element.classList.add("ezTimer");
+         
         this.warn = warn;
         this.intervalId = 0;
         this.seconds = seconds;
@@ -48,9 +52,10 @@ class EzTimer {
     }
     
     start() {
-        var me = this;
         this.show();
-        this.intervalId = setInterval(function() { me.countDown(); }, 1000);
+        this.intervalId = setInterval(() => {
+            this.countDown()
+        }, 1000);
     }
     
     stop() {

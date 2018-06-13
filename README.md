@@ -8,7 +8,7 @@ This package is a simple JavaScript count-down timer that can receive updates an
 
 Sample usage is show in [EzTimer sample](https://github.com/blondie101010/eztimer/blob/master/eztimer-test.html).
 
-The class is simply instanciated as: `var myEzTimer = new EzTimer("myTimer", 15, 5);`  which gives a 15 second timer with a warning at 5 seconds.
+The class is simply instantiated as: `var myEzTimer = new EzTimer("myTimer", 15, 5);`  which gives a 15 second timer with a warning at 5 seconds.
 
 ## synchronization / update
 
