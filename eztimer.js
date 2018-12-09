@@ -7,7 +7,7 @@ class EzTimer {
      * @param {number} seconds 
      * @param {number} warn 
      */
-    constructor(selector, seconds = 0, warn  = 0){
+    constructor(selector, seconds = 0, warn  = 0, call = null){
         if (typeof selector === 'undefined') {
             throw "The `div` parameter is required in EzTimer.";
         }
@@ -22,7 +22,7 @@ class EzTimer {
         this.warn = warn;
         this.intervalId = 0;
         this.seconds = seconds;
-        this.call = null;
+        this.call = call;
         
         this.start();
     }
